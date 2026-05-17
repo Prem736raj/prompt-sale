@@ -73,22 +73,22 @@ class HomeFragment : Fragment() {
     private fun setupCategoryRecyclerView() {
         val categories = listOf(
             Category(1, "Full App\nDevelopment", "~ 1260 Prompts",
-                R.drawable.ic_code_white, R.color.cat_blue,
+                R.drawable.ic_code_white, R.drawable.category_bg_full_app,
                 route = "full_app_development"),
             Category(2, "Website\nBuilding",     "~ 1500 Prompts",
-                R.drawable.ic_web_white,  R.color.cat_green,
+                R.drawable.ic_web_white,  R.drawable.category_bg_web,
                 route = "website_building"),
             Category(3, "Creative\nWriting",     "~ 900 Prompts",
-                R.drawable.ic_edit_white, R.color.cat_orange,
+                R.drawable.ic_edit_white, R.drawable.category_bg_creative,
                 route = "creative_writing"),
             Category(4, "Graphic\nDesign",       "~ 1300 Prompts",
-                R.drawable.ic_design_white, R.color.cat_purple,
+                R.drawable.ic_design_white, R.drawable.category_bg_design,
                 route = "graphic_design"),
             Category(5, "Data\nAnalysis",        "~ 2300 Prompts",
-                R.drawable.ic_chart_white, R.color.cat_red,
+                R.drawable.ic_chart_white, R.drawable.category_bg_data,
                 route = "data_analysis"),
             Category(6, "Marketing\nStrategy",   "~ 1200 Prompts",
-                R.drawable.ic_marketing_white, R.color.cat_yellow,
+                R.drawable.ic_marketing_white, R.drawable.category_bg_marketing,
                 route = "marketing_strategy")
         )
 

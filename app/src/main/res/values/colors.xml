@@ -2,22 +2,30 @@
 <resources>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="background">#F0F4F8</color>
-    <color name="primary_blue">#1565C0</color>
-    <color name="accent_blue">#1E88E5</color>
-    <color name="light_blue">#E3F2FD</color>
-    <color name="text_primary">#1A1A2E</color>
-    <color name="text_secondary">#666666</color>
-    <color name="text_hint">#999999</color>
-    <color name="search_bg">#FFFFFF</color>
+    <color name="background">#F3F6FB</color>
+    <color name="surface">#FFFFFF</color>
     <color name="card_bg">#FFFFFF</color>
-    <color name="divider">#E0E0E0</color>
+    <color name="primary_blue">#1A5FD8</color>
+    <color name="accent_blue">#2E7AE5</color>
+    <color name="light_blue">#E8F0FF</color>
+    <color name="text_primary">#1A1F2B</color>
+    <color name="text_secondary">#667085</color>
+    <color name="text_hint">#98A2B3</color>
+    <color name="search_bg">#FFFFFF</color>
+    <color name="divider">#E2E6EE</color>
     <color name="star_yellow">#FFC107</color>
-    <color name="free_green">#4CAF50</color>
-    <color name="get_blue">#1565C0</color>
+    <color name="free_green">#28A745</color>
+    <color name="get_blue">#1A5FD8</color>
+    <color name="chip_outline">#D0D5DD</color>
+    <color name="badge_bg">#EAF0FF</color>
+    <color name="badge_outline">#D6E4FF</color>
+    <color name="badge_text">#1A5FD8</color>
+    <color name="empty_illustration_bg">#EEF2FF</color>
+    <color name="preview_blur_start">#99FFFFFF</color>
+    <color name="preview_blur_end">#00FFFFFF</color>
 
     <!-- Category Colors -->
-    <color name="cat_blue">#1565C0</color>
+    <color name="cat_blue">#1A5FD8</color>
     <color name="cat_green">#2E7D32</color>
     <color name="cat_orange">#E65100</color>
     <color name="cat_purple">#6A1B9A</color>
@@ -25,11 +33,11 @@
     <color name="cat_yellow">#F57F17</color>
 
     <!-- Bottom Nav -->
-    <color name="nav_selected">#1565C0</color>
-    <color name="nav_unselected">#9E9E9E</color>
+    <color name="nav_selected">#1A5FD8</color>
+    <color name="nav_unselected">#9AA3B2</color>
 
     <!-- Featured Card Colors -->
     <color name="featured_dark">#0D1B2A</color>
-    <color name="featured_blue">#1565C0</color>
+    <color name="featured_blue">#1A5FD8</color>
     <color name="featured_purple">#4A148C</color>
 </resources>

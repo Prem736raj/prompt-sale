@@ -25,11 +25,13 @@ class CategoryPromptsAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         with(holder.binding) {
-            tvPromptTitle.text    = item.title
-            tvCategoryTarget.text =
-                "Category: ${item.category} | Target AI: ${item.targetAI}"
-            tvRating.text    = item.rating.toString()
+            tvPromptTitle.text = item.title
+            tvCategoryBadge.text = item.category
+            tvTargetBadge.text = item.targetAI
+            tvRating.text = item.rating.toString()
             tvDownloads.text = item.downloads
+            tvPrice.text = if (item.isFree) "FREE" else "$9"
+            btnGet.text = if (item.isFree) "GET" else "BUY"
             ivPromptIcon.setImageResource(item.iconRes)
 
             root.setOnClickListener { onClick(item) }

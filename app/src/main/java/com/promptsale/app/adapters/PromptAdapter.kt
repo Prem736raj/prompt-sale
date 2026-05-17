@@ -25,15 +25,13 @@ class PromptAdapter(
         val item = items[position]
         with(holder.binding) {
             tvPromptTitle.text = item.title
-            tvCategory.text = "Category"
-            tvTargetAI.text = item.targetAI
+            tvCategory.text = item.category
+            tvTargetAI.text = item.targetAI.replace("Target AI:", "").trim()
             tvRating.text = item.rating.toString()
             tvDownloads.text = item.downloads
             ivPromptImage.setImageResource(item.imageRes)
-            if (item.isFree) {
-                tvFree.text = "FREE"
-                btnGet.text = "GET"
-            }
+            tvFree.text = if (item.isFree) "FREE" else "$9"
+            btnGet.text = if (item.isFree) "GET" else "BUY"
             root.setOnClickListener { onClick(item) }
             btnGet.setOnClickListener { onClick(item) }
         }

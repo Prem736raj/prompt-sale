@@ -13,7 +13,7 @@ data class Category(
     val name: String,
     val promptCount: String,
     val iconRes: Int,
-    val bgColor: Int,
+    val bgRes: Int,
     val route: String
 )
 

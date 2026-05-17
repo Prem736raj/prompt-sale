@@ -1,7 +1,6 @@
 package com.promptsale.app.utils
 
 import android.content.Context
-import android.graphics.Color
 import android.view.Gravity
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -9,15 +8,6 @@ import androidx.core.content.ContextCompat
 import com.promptsale.app.R
 
 object FilterChipHelper {
-
-    private val chipColors = listOf(
-        "#1565C0", // Blue  - All
-        "#2E7D32", // Green - filter 2
-        "#C62828", // Red   - filter 3
-        "#6A1B9A", // Purple- filter 4
-        "#E65100", // Orange- filter 5
-        "#F57F17"  // Yellow- filter 6
-    )
 
     fun buildChips(
         context: Context,
@@ -28,7 +18,7 @@ object FilterChipHelper {
     ) {
         container.removeAllViews()
 
-        filters.forEachIndexed { index, filter ->
+        filters.forEach { filter ->
             val chip = TextView(context).apply {
                 text    = filter
                 gravity = Gravity.CENTER
@@ -38,16 +28,16 @@ object FilterChipHelper {
                 )
                 textSize = 13f
 
-                val color = chipColors.getOrElse(index) { "#1565C0" }
                 val isSelected = filter == selectedFilter
 
                 if (isSelected) {
                     setBackgroundResource(R.drawable.chip_selected_bg)
-                    background.setTint(Color.parseColor(color))
-                    setTextColor(Color.WHITE)
+                    setTextColor(ContextCompat.getColor(context, R.color.white))
+                    elevation = dpToPx(context, 2).toFloat()
                 } else {
                     setBackgroundResource(R.drawable.chip_unselected_bg)
-                    setTextColor(Color.parseColor(color))
+                    setTextColor(ContextCompat.getColor(context, R.color.text_secondary))
+                    elevation = 0f
                 }
 
                 val params = LinearLayout.LayoutParams(

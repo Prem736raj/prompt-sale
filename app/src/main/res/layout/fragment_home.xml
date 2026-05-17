@@ -10,7 +10,7 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/surface"
         app:elevation="4dp">
 
         <!-- Toolbar -->
@@ -26,6 +26,7 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@drawable/ic_menu"
+                android:tint="@color/text_primary"
                 android:contentDescription="Menu" />
 
             <!-- Logo + Title -->
@@ -63,13 +64,23 @@
 
             </LinearLayout>
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <FrameLayout
                 android:id="@+id/ivProfile"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/ic_profile_avatar"
-                app:civ_border_color="@color/accent_blue"
-                app:civ_border_width="2dp" />
+                android:background="@drawable/avatar_gradient">
+
+                <TextView
+                    android:id="@+id/tvProfileInitials"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="AJ"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
 
         </LinearLayout>
 
@@ -84,7 +95,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/surface"
                 app:cardCornerRadius="22dp"
                 app:cardElevation="2dp">
 
@@ -99,6 +110,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:src="@drawable/ic_search"
+                        android:tint="@color/text_secondary"
                         android:contentDescription="Search" />
 
                     <EditText

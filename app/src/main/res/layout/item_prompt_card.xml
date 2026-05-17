@@ -6,9 +6,10 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="4dp"
     android:layout_marginVertical="5dp"
-    app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="3dp">
+    app:cardBackgroundColor="@color/card_bg"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,8 +22,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="64dp"
             android:layout_height="64dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp">
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/light_blue">
 
             <ImageView
                 android:id="@+id/ivPromptImage"
@@ -52,28 +54,43 @@
                 android:maxLines="2"
                 android:ellipsize="end" />
 
-            <TextView
-                android:id="@+id/tvCategory"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Category"
-                android:textColor="@color/text_secondary"
-                android:textSize="11sp" />
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tvTargetAI"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Target AI: ChatGPT"
-                android:textColor="@color/text_secondary"
-                android:textSize="11sp" />
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/badge_soft_bg"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="Category"
+                    android:textColor="@color/badge_text"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvTargetAI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/badge_outline_bg"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="ChatGPT-4"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
 
             <!-- Rating Row -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="6dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -81,6 +98,7 @@
                     android:layout_width="12dp"
                     android:layout_height="12dp"
                     android:src="@drawable/ic_star"
+                    android:tint="@color/star_yellow"
                     android:contentDescription="Star" />
 
                 <TextView
@@ -97,6 +115,7 @@
                     android:layout_height="12dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/ic_download"
+                    android:tint="@color/text_secondary"
                     android:contentDescription="Downloads" />
 
                 <TextView
@@ -131,7 +150,7 @@
 
             <Button
                 android:id="@+id/btnGet"
-                android:layout_width="60dp"
+                android:layout_width="64dp"
                 android:layout_height="32dp"
                 android:layout_marginTop="4dp"
                 android:backgroundTint="@color/primary_blue"

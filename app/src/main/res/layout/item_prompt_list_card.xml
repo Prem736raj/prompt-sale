@@ -6,9 +6,10 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="4dp"
     android:layout_marginVertical="6dp"
-    app:cardBackgroundColor="@color/white"
+    app:cardBackgroundColor="@color/card_bg"
     app:cardCornerRadius="16dp"
-    app:cardElevation="3dp">
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +24,7 @@
             android:layout_height="64dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="0dp"
-            app:cardBackgroundColor="#F0F4F8">
+            app:cardBackgroundColor="@color/light_blue">
 
             <ImageView
                 android:id="@+id/ivPromptIcon"
@@ -49,24 +50,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Full-Stack E-commerce Website"
-                android:textColor="#1A1A2E"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:maxLines="2"
                 android:ellipsize="end"
                 android:lineSpacingExtra="1dp" />
 
-            <TextView
-                android:id="@+id/tvCategoryTarget"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Category: Full Stack | Target AI: ChatGPT-4"
-                android:textColor="#666666"
-                android:textSize="12sp"
-                android:maxLines="2"
-                android:ellipsize="end"
-                android:lineSpacingExtra="1dp" />
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvCategoryBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/badge_soft_bg"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="Full Stack"
+                    android:textColor="@color/badge_text"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvTargetBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/badge_outline_bg"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="ChatGPT-4"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
 
             <!-- Rating + Downloads Row -->
             <LinearLayout
@@ -87,30 +108,7 @@
                         android:layout_width="14dp"
                         android:layout_height="14dp"
                         android:src="@drawable/ic_star"
-                        android:contentDescription="Star" />
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:src="@drawable/ic_star"
-                        android:contentDescription="Star" />
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:src="@drawable/ic_star"
-                        android:contentDescription="Star" />
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:src="@drawable/ic_star"
-                        android:contentDescription="Star" />
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:src="@drawable/ic_star"
+                        android:tint="@color/star_yellow"
                         android:contentDescription="Star" />
 
                 </LinearLayout>
@@ -121,7 +119,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:text="4.8"
-                    android:textColor="#666666"
+                    android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
                 <TextView
@@ -129,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
                     android:text="|"
-                    android:textColor="#CCCCCC"
+                    android:textColor="@color/divider"
                     android:textSize="12sp" />
 
                 <TextView
@@ -137,7 +135,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12k Downloads"
-                    android:textColor="#666666"
+                    android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -145,17 +143,36 @@
         </LinearLayout>
 
         <!-- GET Button -->
-        <Button
-            android:id="@+id/btnGet"
-            android:layout_width="70dp"
-            android:layout_height="38dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:backgroundTint="#1565C0"
-            android:text="GET"
-            android:textColor="@color/white"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            app:cornerRadius="10dp" />
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FREE"
+                android:textColor="@color/free_green"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/btnGet"
+                android:layout_width="70dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/primary_blue"
+                android:text="GET"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

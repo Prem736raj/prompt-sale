@@ -49,8 +49,15 @@ class FavoritesFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        binding.rvFavorites.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvFavorites.adapter = adapter
+        if (favorites.isEmpty()) {
+            binding.emptyFavoritesState.visibility = View.VISIBLE
+            binding.rvFavorites.visibility = View.GONE
+        } else {
+            binding.emptyFavoritesState.visibility = View.GONE
+            binding.rvFavorites.visibility = View.VISIBLE
+            binding.rvFavorites.layoutManager = LinearLayoutManager(requireContext())
+            binding.rvFavorites.adapter = adapter
+        }
     }
 
     override fun onDestroyView() {

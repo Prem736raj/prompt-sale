@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background">#0D1117</color>
+    <color name="surface">#151C28</color>
+    <color name="card_bg">#151C28</color>
+    <color name="primary_blue">#1A5FD8</color>
+    <color name="accent_blue">#2E7AE5</color>
+    <color name="light_blue">#1C2B4D</color>
+    <color name="text_primary">#E6ECF5</color>
+    <color name="text_secondary">#A7B0C0</color>
+    <color name="text_hint">#7C8799</color>
+    <color name="search_bg">#151C28</color>
+    <color name="divider">#233045</color>
+    <color name="star_yellow">#FFC107</color>
+    <color name="free_green">#38C172</color>
+    <color name="get_blue">#1A5FD8</color>
+    <color name="chip_outline">#2B364A</color>
+    <color name="badge_bg">#1C2B4D</color>
+    <color name="badge_outline">#31405D</color>
+    <color name="badge_text">#A8C6FF</color>
+    <color name="empty_illustration_bg">#1C2434</color>
+    <color name="preview_blur_start">#80151C28</color>
+    <color name="preview_blur_end">#00151C28</color>
+
+    <color name="cat_blue">#1A5FD8</color>
+    <color name="cat_green">#2E7D32</color>
+    <color name="cat_orange">#E65100</color>
+    <color name="cat_purple">#6A1B9A</color>
+    <color name="cat_red">#C62828</color>
+    <color name="cat_yellow">#F57F17</color>
+
+    <color name="nav_selected">#1A5FD8</color>
+    <color name="nav_unselected">#6C7587</color>
+
+    <color name="featured_dark">#0B1424</color>
+    <color name="featured_blue">#1A5FD8</color>
+    <color name="featured_purple">#3A136E</color>
+</resources>

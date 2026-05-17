@@ -2,7 +2,6 @@ package com.promptsale.app.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.promptsale.app.databinding.ItemCategoryCardBinding
 import com.promptsale.app.models.Category
@@ -28,9 +27,7 @@ class CategoryAdapter(
             tvCategoryName.text = item.name
             tvCategoryCount.text = item.promptCount
             ivCategoryIcon.setImageResource(item.iconRes)
-            categoryContainer.setBackgroundColor(
-                ContextCompat.getColor(root.context, item.bgColor)
-            )
+            categoryContainer.setBackgroundResource(item.bgRes)
             root.setOnClickListener { onClick(item) }
         }
     }
