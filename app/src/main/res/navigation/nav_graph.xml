@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.promptsale.app.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/actionHomeFragmentToCategoryDetailFragment"
+            app:destination="@id/categoryDetailFragment" />
+        <action
+            android:id="@+id/actionHomeFragmentToPromptDetailFragment"
+            app:destination="@id/promptDetailFragment" />
+        <action
+            android:id="@+id/actionHomeFragmentToCategoryPromptsFragment"
+            app:destination="@id/categoryPromptsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.promptsale.app.ui.category.CategoryFragment"
+        android:label="Category"
+        tools:layout="@layout/fragment_category" />
+
+    <fragment
+        android:id="@+id/categoryDetailFragment"
+        android:name="com.promptsale.app.ui.category.CategoryDetailFragment"
+        android:label="Category Detail"
+        tools:layout="@layout/fragment_category_detail">
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/promptDetailFragment"
+        android:name="com.promptsale.app.ui.detail.PromptDetailFragment"
+        android:label="Prompt Details"
+        tools:layout="@layout/fragment_prompt_detail">
+        <argument
+            android:name="promptId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.promptsale.app.ui.favorites.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/actionFavoritesFragmentToPromptDetailFragment"
+            app:destination="@id/promptDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.promptsale.app.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/categoryPromptsFragment"
+        android:name="com.promptsale.app.ui.category.CategoryPromptsFragment"
+        android:label="Category Prompts"
+        tools:layout="@layout/fragment_category_prompts">
+        <argument
+            android:name="categoryRoute"
+            app:argType="string" />
+    </fragment>
+</navigation>

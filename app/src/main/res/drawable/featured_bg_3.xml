@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="200dp"
+    android:viewportWidth="400"
+    android:viewportHeight="200">
+    <path android:fillColor="#4A148C"
+        android:pathData="M0,0h400v200H0z"/>
+    <!-- Art canvas -->
+    <path android:fillColor="#6A1B9A"
+        android:pathData="M60,30h100v120H60z"/>
+    <!-- Colorful art elements -->
+    <path android:fillColor="#E91E63"
+        android:pathData="M70,50m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"/>
+    <path android:fillColor="#FF9800"
+        android:pathData="M120,80m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0"/>
+    <path android:fillColor="#00BCD4"
+        android:pathData="M80,110m-18,0a18,18 0,1 1,36 0a18,18 0,1 1,-36 0"/>
+    <!-- Sparkles -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M220,40l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z"/>
+    <path android:fillColor="#FFFF00"
+        android:pathData="M270,70l3,8 8,3 -8,3 -3,8 -3,-8 -8,-3 8,-3z"/>
+    <path android:fillColor="#FF69B4"
+        android:pathData="M310,30l2,5 5,2 -5,2 -2,5 -2,-5 -5,-2 5,-2z"/>
+    <!-- Gradient overlay circles -->
+    <path android:fillColor="#7B1FA220"
+        android:pathData="M350,100m-60,0a60,60 0,1 1,120 0a60,60 0,1 1,-120 0"/>
+</vector>

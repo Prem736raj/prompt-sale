@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp" android:height="48dp"
+    android:viewportWidth="48" android:viewportHeight="48">
+    <path android:fillColor="#EDE7F6"
+        android:pathData="M0,0h48v48H0z"/>
+    <!-- Neural network nodes -->
+    <path android:fillColor="#4527A0"
+        android:pathData="M10,14m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    <path android:fillColor="#4527A0"
+        android:pathData="M10,24m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    <path android:fillColor="#4527A0"
+        android:pathData="M10,34m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    <path android:fillColor="#7C4DFF"
+        android:pathData="M24,19m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    <path android:fillColor="#7C4DFF"
+        android:pathData="M24,29m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    <path android:fillColor="#B388FF"
+        android:pathData="M38,24m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    <!-- Connections -->
+    <path android:fillColor="#7C4DFF"
+        android:pathData="M14,14L20,19M14,14L20,29M14,24L20,19M14,24L20,29M14,34L20,19M14,34L20,29M28,19L34,24M28,29L34,24"
+        android:strokeColor="#7C4DFF"
+        android:strokeWidth="1"
+        android:fillAlpha="0"/>
+</vector>

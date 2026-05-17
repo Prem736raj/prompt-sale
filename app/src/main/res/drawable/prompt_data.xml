@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <path android:fillColor="#FFEBEE" android:pathData="M0,0h80v80H0z"/>
+    <!-- Bar chart -->
+    <path android:fillColor="#C62828"
+        android:pathData="M10,55h12v15H10zM26,40h12v30H26zM42,25h12v45H42zM58,32h12v38H58z"/>
+    <!-- Line graph -->
+    <path android:fillColor="#E53935"
+        android:pathData="M10,50L26,38L42,22L58,30"
+        android:strokeColor="#E53935"
+        android:strokeWidth="2"
+        android:fillAlpha="0"/>
+</vector>

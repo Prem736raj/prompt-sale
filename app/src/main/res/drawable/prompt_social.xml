@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <path android:fillColor="#E3F2FD" android:pathData="M0,0h80v80H0z"/>
+    <!-- Chat bubbles -->
+    <path android:fillColor="#1565C0"
+        android:pathData="M10,15h45v30H10z"/>
+    <path android:fillColor="#1565C0"
+        android:pathData="M10,45l10,10v-10z"/>
+    <path android:fillColor="#42A5F5"
+        android:pathData="M30,35h40v25H30z"/>
+    <path android:fillColor="#42A5F5"
+        android:pathData="M70,60l-10,8v-8z"/>
+</vector>

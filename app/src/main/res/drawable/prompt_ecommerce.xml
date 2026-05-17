@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <path android:fillColor="#FFF8E1" android:pathData="M0,0h80v80H0z"/>
+    <!-- Shopping cart -->
+    <path android:fillColor="#FF8F00"
+        android:pathData="M10,15h8l10,35h34l8,-25H25"/>
+    <path android:fillColor="#FF8F00"
+        android:pathData="M35,55m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
+    <path android:fillColor="#FF8F00"
+        android:pathData="M55,55m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
+</vector>

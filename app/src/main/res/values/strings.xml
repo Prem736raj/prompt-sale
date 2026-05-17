@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Prompt Sale</string>
+    <string name="search_hint">Search 1000s of Free Prompts…</string>
+    <string name="featured_collections">FEATURED COLLECTIONS</string>
+    <string name="explore_by_category">EXPLORE BY CATEGORY</string>
+    <string name="popular_prompts">POPULAR PROMPTS</string>
+    <string name="build_now">BUILD NOW</string>
+    <string name="view_details">VIEW DETAILS</string>
+    <string name="get_free">GET FREE</string>
+    <string name="free">FREE</string>
+    <string name="get">GET</string>
+    <string name="view">VIEW</string>
+    <string name="filter_sort">FILTER &amp; SORT</string>
+    <string name="copy_full_prompt">Copy Full Prompt</string>
+    <string name="my_favorites">My Favorites</string>
+    <string name="my_profile">My Profile</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="prompt_structure">PROMPT STRUCTURE</string>
+    <string name="reviews">REVIEWS</string>
+</resources>

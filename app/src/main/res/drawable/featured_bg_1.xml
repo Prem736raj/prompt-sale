@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="200dp"
+    android:viewportWidth="400"
+    android:viewportHeight="200">
+    <!-- Dark background -->
+    <path android:fillColor="#0D1B2A"
+        android:pathData="M0,0h400v200H0z"/>
+    <!-- Phone mockup left -->
+    <path android:fillColor="#1A2A3A"
+        android:pathData="M60,30h60v120H60z"
+        android:strokeColor="#2196F3"
+        android:strokeWidth="2"/>
+    <!-- Screen content lines -->
+    <path android:fillColor="#2196F3"
+        android:pathData="M67,50h46v6H67z"/>
+    <path android:fillColor="#37474F"
+        android:pathData="M67,62h46v4H67z"/>
+    <path android:fillColor="#37474F"
+        android:pathData="M67,72h46v4H67z"/>
+    <path android:fillColor="#37474F"
+        android:pathData="M67,82h30v4H67z"/>
+    <!-- Chat bubbles right -->
+    <path android:fillColor="#1565C0"
+        android:pathData="M140,50h70v20H140z"/>
+    <path android:fillColor="#263238"
+        android:pathData="M150,80h50v15H150z"/>
+    <path android:fillColor="#263238"
+        android:pathData="M140,103h60v15H140z"/>
+    <!-- Floating icons -->
+    <path android:fillColor="#0288D1"
+        android:pathData="M240,40m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M233,37h14v2h-14zM233,41h14v2h-14zM233,45h10v2h-10z"/>
+    <!-- Decorative circles -->
+    <path android:fillColor="#1565C020"
+        android:pathData="M320,20m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+    <path android:fillColor="#0D47A120"
+        android:pathData="M360,150m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"/>
+</vector>
