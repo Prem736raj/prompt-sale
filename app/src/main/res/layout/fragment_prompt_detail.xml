@@ -33,10 +33,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
-                android:text="Prompt Details"
+                android:text="Prompt Detail"
                 android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivFavorite"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_favorite_border"
+                android:tint="@color/text_primary"
+                android:contentDescription="Favorite" />
 
         </LinearLayout>
 
@@ -51,7 +59,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -70,10 +79,10 @@
                     android:padding="16dp">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="96dp"
-                        android:layout_height="96dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_gravity="center_horizontal"
-                        app:cardCornerRadius="22dp"
+                        app:cardCornerRadius="18dp"
                         app:cardElevation="0dp"
                         app:cardBackgroundColor="@color/light_blue">
 
@@ -81,7 +90,7 @@
                             android:id="@+id/ivPromptDetailImage"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="18dp"
+                            android:padding="16dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/ic_prompt_placeholder" />
 
@@ -91,11 +100,11 @@
                         android:id="@+id/tvPromptDetailTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="14dp"
+                        android:layout_marginTop="12dp"
                         android:gravity="center"
                         android:text="Complete Social Media App Prompt"
                         android:textColor="@color/text_primary"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -170,8 +179,8 @@
                         android:orientation="horizontal">
 
                         <FrameLayout
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:background="@drawable/avatar_gradient">
 
                             <TextView
@@ -180,34 +189,32 @@
                                 android:gravity="center"
                                 android:text="AJ"
                                 android:textColor="@color/white"
-                                android:textSize="12sp"
+                                android:textSize="11sp"
                                 android:textStyle="bold" />
 
                         </FrameLayout>
 
-                        <LinearLayout
+                        <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:text="by Alex Johnson"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Alex Johnson"
-                                android:textColor="@color/text_primary"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Creator"
-                                android:textColor="@color/text_secondary"
-                                android:textSize="12sp" />
-
-                        </LinearLayout>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnFollow"
+                            android:layout_width="86dp"
+                            android:layout_height="32dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="FOLLOW"
+                            android:textColor="@color/primary_blue"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="16dp"
+                            app:strokeColor="@color/primary_blue"
+                            app:strokeWidth="1dp" />
 
                     </LinearLayout>
 
@@ -234,11 +241,19 @@
                 android:textSize="14sp"
                 android:lineSpacingExtra="3dp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:text="PREVIEW"
+                style="@style/SectionTitle" />
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/card_bg"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="3dp">
@@ -263,20 +278,18 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/prompt_blur_overlay" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|end"
-                        android:text="Locked preview"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="12sp"
-                        android:layout_marginTop="8dp" />
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_lock"
+                        android:tint="@color/text_secondary"
+                        android:contentDescription="Locked" />
 
                 </FrameLayout>
 
             </androidx.cardview.widget.CardView>
 
-            <!-- Reviews Section -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -306,21 +319,86 @@
                         android:orientation="vertical"
                         android:padding="12dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="A. Nguyen"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
-                        <TextView
+                            <FrameLayout
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/avatar_gradient">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="AN"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="A. Nguyen"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="5.0"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="12sp" />
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/ic_star"
+                                android:tint="@color/star_yellow"
+                                android:contentDescription="Star" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginStart="2dp"
+                                android:src="@drawable/ic_star"
+                                android:tint="@color/star_yellow"
+                                android:contentDescription="Star" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginStart="2dp"
+                                android:src="@drawable/ic_star"
+                                android:tint="@color/star_yellow"
+                                android:contentDescription="Star" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginStart="2dp"
+                                android:src="@drawable/ic_star"
+                                android:tint="@color/star_yellow"
+                                android:contentDescription="Star" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginStart="2dp"
+                                android:src="@drawable/ic_star"
+                                android:tint="@color/star_yellow"
+                                android:contentDescription="Star" />
+
+                        </LinearLayout>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -337,7 +415,6 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     app:cardBackgroundColor="@color/card_bg"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="2dp">
@@ -348,68 +425,92 @@
                         android:orientation="vertical"
                         android:padding="12dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="J. Patel"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
-                        <TextView
+                            <FrameLayout
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/avatar_gradient">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="JP"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="J. Patel"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="4.8"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="12sp" />
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/ic_star"
+                                android:tint="@color/star_yellow"
+                                android:contentDescription="Star" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginStart="2dp"
+                                android:src="@drawable/ic_star"
+                                android:tint="@color/star_yellow"
+                                android:contentDescription="Star" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginStart="2dp"
+                                android:src="@drawable/ic_star"
+                                android:tint="@color/star_yellow"
+                                android:contentDescription="Star" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginStart="2dp"
+                                android:src="@drawable/ic_star"
+                                android:tint="@color/star_yellow"
+                                android:contentDescription="Star" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginStart="2dp"
+                                android:src="@drawable/ic_star"
+                                android:tint="@color/star_yellow"
+                                android:contentDescription="Star" />
+
+                        </LinearLayout>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="6dp"
                             android:text="Loved the API checklist. Would buy again."
-                            android:textColor="@color/text_secondary"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/card_bg"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="2dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="S. Brown"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="4.7"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:text="Strong prompt and easy to customize for new features."
                             android:textColor="@color/text_secondary"
                             android:textSize="12sp" />
 
@@ -438,7 +539,7 @@
             android:layout_height="44dp"
             android:background="@drawable/empty_state_icon_bg"
             android:src="@drawable/ic_favorite_border"
-            android:tint="@color/primary_blue"
+            android:tint="@color/free_green"
             android:contentDescription="Favorite" />
 
         <Button
@@ -447,7 +548,7 @@
             android:layout_height="44dp"
             android:layout_marginStart="12dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/primary_blue"
+            android:backgroundTint="@color/free_green"
             android:text="GET FREE"
             android:textColor="@color/white"
             android:textSize="14sp"
